@@ -41,7 +41,11 @@ export default async function Home({ searchParams }: HomeProps) {
             '
             >
                {listings.map((item) => (
-                  <ListingCard data={item} currentUser={currentUser} />
+                  <ListingCard
+                     key={item.id}
+                     data={item}
+                     currentUser={currentUser}
+                  />
                ))}
             </div>
          </Container>
